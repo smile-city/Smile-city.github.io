@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТЦ Мирамикс | Отчёт по продвижению за IV квартал 2025</title>
+    <meta name="description" content="Отчёт о продвижении ТЦ Мирамикс за IV квартал 2025. Открыто делимся результатами маркетинговых активностей с арендаторами и партнёрами.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00A8E8;
+            --secondary: #0077B6;
+            --accent: #FFEB3B;
+            --dark: #0F1C2E;
+            --light: #FFFFFF;
+            --gray: #F8FAFC;
+            --shadow: 0 15px 35px rgba(15, 28, 46, 0.12);
+            --transition: all 0.4s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* ==================== ПОЛНОЭКРАННЫЙ СНЕГОПАД НА ВСЮ СТРАНИЦУ ==================== */
+        .snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        /* Маленькие круглые снежинки */
+        .snowflake {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 
+                0 0 8px rgba(255,255,255,0.95),
+                0 0 16px rgba(255,255,255,0.7);
+            animation: snowfall linear infinite, sway-snow ease-in-out infinite alternate;
+            transform-origin: center center;
+            opacity: 0.85;
+        }
+
+        /* БОЛЬШИЕ БЕЛО-ГОЛУБЫЕ СНЕЖИНКИ */
+        .large-snowflake {
+            position: absolute;
+            color: #E0F4FF;
+            font-size: 32px;
+            line-height: 1;
+            text-shadow: 
+                0 0 12px rgba(255,255,255,0.95),
+                0 0 22px #00A8E8,
+                0 0 35px rgba(0,168,232,0.6);
+            animation: snowfall linear infinite, sway-snow ease-in-out infinite alternate;
+            transform-origin: center center;
+            opacity: 0.92;
+            user-select: none;
+            pointer-events: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes snowfall {
+            0%   { top: -15vh; opacity: 0; }
+            10%  { opacity: 0.92; }
+            90%  { opacity: 0.92; }
+            100% { top: 110vh; opacity: 0; }
+        }
+
+        @keyframes sway-snow {
+            0%   { transform: translateX(-30px) rotate(-18deg); }
+            100% { transform: translateX(30px) rotate(18deg); }
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        h1 { color: white; }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(135deg, rgba(0,168,232,0.82), rgba(0,119,182,0.78)), 
+                        url('image5.png') center/cover no-repeat; 
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(transparent, var(--light));
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 25px;
+            text-shadow: 0 6px 20px rgba(0,0,0,0.6);
+        }
+
+        .hero p {
+            font-size: 1.8rem;
+            max-width: 900px;
+            margin: 0 auto 50px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #0F1C2E;
+            padding: 18px 50px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255,235,59,0.45);
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(255,235,59,0.55);
+        }
+
+        section { padding: 120px 0; }
+        .bg-gray { background: var(--gray); }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            font-size: 3.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 110px;
+            height: 5px;
+            background: var(--accent);
+            display: block;
+            margin: 20px auto 0;
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.4rem;
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            color: #555;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 25px 50px rgba(15,28,46,0.18);
+        }
+
+        .img-container, .video-container {
+            width: 100%;
+            padding-bottom: 177.67%;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .img-container img,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 35px;
+        }
+
+        .card h3 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 35px;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .stat {
+            padding: 50px 25px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .stat:hover { transform: translateY(-10px); }
+
+        .stat-number {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 140px 0;
+        }
+
+        .cta h2 {
+            font-size: 3.8rem;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .cta p {
+            font-size: 1.6rem;
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+
+        footer p:first-child {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 4rem; }
+            .hero p { font-size: 1.5rem; }
+            .section-title { font-size: 3rem; }
+        }
+
+        @media (max-width: 768px) {
+            .hero { height: 90vh; min-height: 600px; }
+            .hero h1 { font-size: 3.2rem; }
+            .hero p { font-size: 1.3rem; padding: 0 20px; }
+            section { padding: 80px 0; }
+            .section-title { font-size: 2.6rem; }
+            .cards { gap: 30px; }
+            .card-body { padding: 25px; }
+            .card h3 { font-size: 1.8rem; }
+            .cta { padding: 100px 0; }
+            .cta h2 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- СНЕГОПАД НА ВСЮ СТРАНИЦУ (фиксированный, виден при любом скролле) -->
+    <div class="snow-container"></div>
+
+    <section class="hero" data-aos="fade-down">
+        <div class="container">
+            <h1>Отчёт по продвижению<br>IV квартал 2025</h1>
+            <p>Уважаемые арендаторы и партнёры! <br> Делимся результатами маркетинговых активностей <br> IV квартала 2025 года в ТЦ Мирамикс</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Трафикообразующее мероприятие «День Рождения ТЦ МираМикс»</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                25 октября<br>
+                Призовой фонд: 50 000 рублей, Яндекс станции, сертификаты от “Безумно” и арендатора “Ralf Ringer”
+            </p>
+
+            <div class="stats">
+                <div class="stat" data-aos="zoom-in">
+                    <div class="stat-number">+13%</div>
+                    <p>трафик 25 октября к предыдущему воскресенью</p>
+                </div>
+                <div class="stat" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number">710</div>
+                    <p>купонов участвовало в розыгрыше</p>
+                </div>
+                <div class="stat" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-number">+9%</div>
+                    <p>ТО арендаторов за месяц</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card" data-aos="fade-up">
+                    <div class="video-container">
+                        <video src="1.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                    <div class="card-body">
+                        <h3>Много-много активностей</h3>
+                        <p>В программе были, множетсво мастер-классов по приготовлению еды. Также яркая и насыщенная развлекательная программа, которая никого не оставила равнодушным</p>
+                    </div>
+                </div>
+
+                <div class="card" data-aos="fade-right">
+                    <div class="img-container">
+                        <img src="2.jpg" alt="Участники и зоны фестиваля"></div>
+                    <div class="card-body">
+                        <h3>Угощения и призы для всех гостей</h3>
+                        <p>Как всегда ценные и желанные призы. И конечно же, 25 кг праздничного торта и куча других угощений для всех посетителей!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Новогоднее оформление</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+В этом году темой оформления стал “Новый год в Советском стиле”. Это популярный тренд последних лет, который вызывает интерес как у аудитории, жившей в СССР, из-за элемента ностальгии, так и у нового поколения, слышавшего об этом от родителей.<br> В атриуме была установлена елка в советском стиле, украшены хвойными веточками, подвесными фигурами и натянутыми флажками. На фасаде смонтированы гирлянды и вывеска “С Новым Годом”.
+            </p>
+
+            <div class="cards">
+                <div class="card" data-aos="fade-left">
+                    <div class="img-container">
+                        <img src="photo_2_2026-04-13_16-02-25.jpg" alt="Новогодние елки">
+                    </div>
+                    <div class="card-body">
+                        <h3>Ничего не забыли!</h3>
+                        <p>Вся центральная зона обвешана новогодними, игрушками, еловыми веточками и гирляндами</p>
+                    </div>
+                </div>
+
+                <div class="card" data-aos="fade-up">
+                    <div class="img-container">
+                        <img src="photo_1_2026-04-13_16-02-25.jpg" alt="Атриум">
+                    </div>
+                    <div class="card-body">
+                        <h3>Новая вывеска Мирамикс</h3>
+                        <p>На протяжении полугода старательно выполняли множество этапов, которые позволили представить вам яркую, современную и главное безопасную центральную вывеску ТЦ</p>
+                    </div>
+                </div>
+
+                <div class="card" data-aos="fade-right">
+                    <div class="img-container">
+                        <img src="photo_3_2026-04-13_16-02-25.jpg" alt="Каток">
+                    </div>
+                    <div class="card-body">
+                        <h3>Атриум на высоте</h3>
+                        <p>В зоне атриума разместили декорации в стиле СССР</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2 data-aos="fade-up">Вместе мы можем больше!</h2>
+            <p data-aos="fade-up" data-aos-delay="200">
+                Приглашаем арендаторов к совместным активностям, партнёрским проектам и новым идеям.<br>
+                Давайте развивать ТЦ Мирамикс вместе!
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>ТЦ Мирамикс — ваш надёжный партнёр</p>
+            <p>© 2026 ТЦ Мирамикс. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-quart',
+            once: true
+        });
+    </script>
+
+    <!-- Скрипт снегопада — теперь точно на всю высоту страницы при любом скролле -->
+    <script>
+        function createSnowflakes() {
+            const container = document.querySelector('.snow-container');
+
+            // Маленькие круглые снежинки
+            const numSmall = 95;
+            for (let i = 0; i < numSmall; i++) {
+                const flake = document.createElement('div');
+                flake.className = 'snowflake';
+
+                const size = Math.random() * 13 + 4;
+                const fallTime = Math.random() * 12 + 9;
+                const swayTime = Math.random() * 3.5 + 2.5;
+                const delay = Math.random() * 18;
+
+                flake.style.width = `${size}px`;
+                flake.style.height = `${size}px`;
+                flake.style.left = `${Math.random() * 100}%`;
+                flake.style.opacity = Math.random() * 0.3 + 0.7;
+                flake.style.animation = `snowfall ${fallTime}s linear infinite, sway-snow ${swayTime}s ease-in-out infinite alternate`;
+                flake.style.animationDelay = `-${delay}s`;
+
+                container.appendChild(flake);
+            }
+
+            // Большие бело-голубые снежинки
+            const numLarge = 38;
+            for (let i = 0; i < numLarge; i++) {
+                const flake = document.createElement('div');
+                flake.className = 'large-snowflake';
+                flake.textContent = '❄️';
+
+                const size = Math.random() * 38 + 22;
+                const fallTime = Math.random() * 16 + 13;
+                const swayTime = Math.random() * 4.5 + 3;
+                const delay = Math.random() * 25;
+
+                flake.style.fontSize = `${size}px`;
+                flake.style.left = `${Math.random() * 100}%`;
+                flake.style.opacity = Math.random() * 0.35 + 0.75;
+                flake.style.animation = `snowfall ${fallTime}s linear infinite, sway-snow ${swayTime}s ease-in-out infinite alternate`;
+                flake.style.animationDelay = `-${delay}s`;
+
+                container.appendChild(flake);
+            }
+        }
+
+        window.addEventListener('load', createSnowflakes);
+    </script>
+</body>
+</html>
